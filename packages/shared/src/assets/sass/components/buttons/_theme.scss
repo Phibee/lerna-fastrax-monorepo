@@ -1,0 +1,79 @@
+.btn.rounded {
+	border-radius: var(--button-rounded-radius);
+}
+
+.btn-square {
+	border-radius: 3px;
+}
+
+@each $name, $color in $theme-colors {
+	.btn-#{$name} {
+		--btn-color-h: #{hue($color)};
+		--btn-color-s: #{saturation($color)};
+		--btn-color-l: #{lightness($color)};
+		--btn-color-rgb: #{$color};
+		--text-color: white;
+	}
+
+	.btn-#{$name}.inverted.waves-effect .waves-ripple{
+		@include bg-gradient(var(--btn-color-gradient), true);
+	}
+	
+	.btn-#{$name}:not(.inverted) {
+		background: var(--btn-color-rgb);
+		color: var(--text-color) !important;
+	}
+	
+	.btn-#{$name}.inverted {
+		background: var(--text-color);
+		color: var(--btn-color-rgb) !important;
+		border: thin solid var(--btn-color-rgb) !important;
+
+		--btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	}
+
+	.btn.shadow  {
+		--l: 20%;
+		--btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+		@include box-shadow("0 8px 15px -9px", var(--btn-shadow-color));
+
+
+		&:focus, &:hover, &:active {
+			--l: 5%;
+			--btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+
+			@include box-shadow("0 8px 21px -5px", var(--btn-shadow-color));
+		}
+	}
+}
+
+@each $keyShadowName, $shadowValue in $shadows {
+	.btn.shadow-#{$keyShadowName}  {
+		--l: 20%;
+		--btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+		@include box-shadow("0 8px 15px -9px", var(--btn-shadow-color));
+
+
+		&:focus, &:hover, &:active {
+			--l: 5%;
+			--btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+
+			@include box-shadow("0 8px 21px -5px", var(--btn-shadow-color));
+		}
+	}
+}
+
+
+@each $name, $color in $theme-colors {
+	.bg-#{$name}
+	{
+		background-color: #{$color};
+	}
+}
+
+@each $keySizeName, $sizeValue in $btn-padding {
+    .btn.btn-#{$keySizeName}{
+        padding: $sizeValue;
+        font-size: get($btn-font-size, $keySizeName)
+    }
+}

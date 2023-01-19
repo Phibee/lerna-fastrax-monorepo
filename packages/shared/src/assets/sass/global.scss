@@ -1,0 +1,17 @@
+@import "tailwindcss/base.css";
+@import "tailwindcss/components.css";
+@import "tailwindcss/utilities.css";
+
+/* Plugins for Ripple effect */
+@import "node-waves/dist/waves.css";
+
+#root {
+      --color-primary: #4ff0c9;
+      --color-secondary: #172a45;
+}
+
+@import "./base/functions";
+@import "./base/mixins";
+@import "./base/variables";
+
+@import "./components/buttons";

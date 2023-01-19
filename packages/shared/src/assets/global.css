@@ -1,0 +1,3303 @@
+/*
+! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+*/
+
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.outline {
+  outline-style: solid;
+}
+
+/* Plugins for Ripple effect */
+
+/*!
+ * Waves v0.7.6
+ * http://fian.my.id/Waves 
+ * 
+ * Copyright 2014-2018 Alfiana E. Sibuea and other contributors 
+ * Released under the MIT license 
+ * https://github.com/fians/Waves/blob/master/LICENSE */
+
+.waves-effect {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.waves-effect .waves-ripple {
+  position: absolute;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.2);
+  background: radial-gradient(rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.5) 60%, rgba(255, 255, 255, 0) 70%);
+  transition: all 0.5s ease-out;
+  transition-property: transform, opacity;
+  transform: scale(0) translate(0, 0);
+  pointer-events: none;
+}
+
+.waves-effect.waves-light .waves-ripple {
+  background: rgba(255, 255, 255, 0.4);
+  background: radial-gradient(rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0) 70%);
+}
+
+.waves-effect.waves-classic .waves-ripple {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.waves-effect.waves-classic.waves-light .waves-ripple {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.waves-notransition {
+  transition: none !important;
+}
+
+.waves-button,
+.waves-circle {
+  transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+}
+
+.waves-button,
+.waves-button:hover,
+.waves-button:visited,
+.waves-button-input {
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 1em;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.waves-button {
+  padding: 0.85em 1.1em;
+  border-radius: 0.2em;
+}
+
+.waves-button-input {
+  margin: 0;
+  padding: 0.85em 1.1em;
+}
+
+.waves-input-wrapper {
+  border-radius: 0.2em;
+  vertical-align: bottom;
+}
+
+.waves-input-wrapper.waves-button {
+  padding: 0;
+}
+
+.waves-input-wrapper .waves-button-input {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.waves-circle {
+  text-align: center;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  border-radius: 50%;
+}
+
+.waves-float {
+  -webkit-mask-image: none;
+  box-shadow: 0px 1px 1.5px 1px rgba(0, 0, 0, 0.12);
+  transition: all 300ms;
+}
+
+.waves-float:active {
+  box-shadow: 0px 8px 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+.waves-block {
+  display: block;
+}
+
+#root {
+  --color-primary: #4ff0c9;
+  --color-secondary: #172a45;
+}
+
+/*
+    MIXINS
+*/
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*
+    Scroll Mixins
+*/
+
+.btn {
+  --button-rounded-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-weight: normal;
+  border: none;
+  margin: .2rem .5rem;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn:disabled {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.btn:not(:disabled).is-loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn .svg-icon.loading {
+  margin-left: 0.2rem;
+}
+
+.btn .svg-icon.loading > svg {
+  animation: rotation 1s infinite linear;
+}
+
+.btn.rounded {
+  border-radius: var(--button-rounded-radius);
+}
+
+.btn-square {
+  border-radius: 3px;
+}
+
+.btn-white {
+  --btn-color-h: 0deg;
+  --btn-color-s: 0%;
+  --btn-color-l: 100%;
+  --btn-color-rgb: #ffffff;
+  --text-color: white;
+}
+
+.btn-white.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-white:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-white.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-light {
+  --btn-color-h: 204deg;
+  --btn-color-s: 33.33333%;
+  --btn-color-l: 97.05882%;
+  --btn-color-rgb: #F5F8FA;
+  --text-color: white;
+}
+
+.btn-light.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-light:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-light.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-primary {
+  --btn-color-h: 210.44776deg;
+  --btn-color-s: 100%;
+  --btn-color-l: 60.58824%;
+  --btn-color-rgb: #3699FF;
+  --text-color: white;
+}
+
+.btn-primary.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-primary:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-primary.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-secondary {
+  --btn-color-h: 229.09091deg;
+  --btn-color-s: 25.5814%;
+  --btn-color-l: 91.56863%;
+  --btn-color-rgb: #E4E6EF;
+  --text-color: white;
+}
+
+.btn-secondary.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-secondary:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-secondary.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-success {
+  --btn-color-h: 177.17647deg;
+  --btn-color-s: 75.89286%;
+  --btn-color-l: 43.92157%;
+  --btn-color-rgb: #1BC5BD;
+  --text-color: white;
+}
+
+.btn-success.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-success:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-success.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-info {
+  --btn-color-h: 259.88372deg;
+  --btn-color-s: 96.62921%;
+  --btn-color-l: 65.09804%;
+  --btn-color-rgb: #8950FC;
+  --text-color: white;
+}
+
+.btn-info.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-info:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-info.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-warning {
+  --btn-color-h: 39.52941deg;
+  --btn-color-s: 100%;
+  --btn-color-l: 50%;
+  --btn-color-rgb: #FFA800;
+  --text-color: white;
+}
+
+.btn-warning.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-warning:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-warning.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-danger {
+  --btn-color-h: 353.57143deg;
+  --btn-color-s: 90.32258%;
+  --btn-color-l: 63.52941%;
+  --btn-color-rgb: #F64E60;
+  --text-color: white;
+}
+
+.btn-danger.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-danger:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-danger.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-dark {
+  --btn-color-h: 230.76923deg;
+  --btn-color-s: 35.13514%;
+  --btn-color-l: 14.5098%;
+  --btn-color-rgb: #181C32;
+  --text-color: white;
+}
+
+.btn-dark.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-dark:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-dark.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-darkgrey {
+  --btn-color-h: 0deg;
+  --btn-color-s: 0%;
+  --btn-color-l: 66.27451%;
+  --btn-color-rgb: #a9a9a9;
+  --text-color: white;
+}
+
+.btn-darkgrey.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-darkgrey:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-darkgrey.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-red {
+  --btn-color-h: 5.29412deg;
+  --btn-color-s: 77.27273%;
+  --btn-color-l: 56.86275%;
+  --btn-color-rgb: #e64b3c;
+  --text-color: white;
+}
+
+.btn-red.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-red:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-red.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-orange {
+  --btn-color-h: 27.5deg;
+  --btn-color-s: 78.68852%;
+  --btn-color-l: 52.15686%;
+  --btn-color-rgb: #e57d25;
+  --text-color: white;
+}
+
+.btn-orange.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-orange:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-orange.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-green {
+  --btn-color-h: 146.71533deg;
+  --btn-color-s: 65.55024%;
+  --btn-color-l: 40.98039%;
+  --btn-color-rgb: #24ad61;
+  --text-color: white;
+}
+
+.btn-green.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-green:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-green.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-blue {
+  --btn-color-h: 192.32877deg;
+  --btn-color-s: 100%;
+  --btn-color-l: 42.94118%;
+  --btn-color-rgb: #00aedb;
+  --text-color: white;
+}
+
+.btn-blue.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-blue:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-blue.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-lightseagreen {
+  --btn-color-h: 168.65854deg;
+  --btn-color-s: 78.09524%;
+  --btn-color-l: 41.17647%;
+  --btn-color-rgb: #17bb9c;
+  --text-color: white;
+}
+
+.btn-lightseagreen.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-lightseagreen:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-lightseagreen.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-crusta {
+  --btn-color-h: 20.84211deg;
+  --btn-color-s: 88.78505%;
+  --btn-color-l: 58.03922%;
+  --btn-color-rgb: #f37735;
+  --text-color: white;
+}
+
+.btn-crusta.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-crusta:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-crusta.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-tiffanyblue {
+  --btn-color-h: 181.04046deg;
+  --btn-color-s: 100%;
+  --btn-color-l: 33.92157%;
+  --btn-color-rgb: #00aaad;
+  --text-color: white;
+}
+
+.btn-tiffanyblue.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-tiffanyblue:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-tiffanyblue.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-teal {
+  --btn-color-h: 180deg;
+  --btn-color-s: 100%;
+  --btn-color-l: 25.09804%;
+  --btn-color-rgb: #008080;
+  --text-color: white;
+}
+
+.btn-teal.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-teal:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-teal.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-caribeangreen {
+  --btn-color-h: 167.04545deg;
+  --btn-color-s: 80.73394%;
+  --btn-color-l: 42.7451%;
+  --btn-color-rgb: #15c59f;
+  --text-color: white;
+}
+
+.btn-caribeangreen.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-caribeangreen:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-caribeangreen.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-yelloworange {
+  --btn-color-h: 31.11111deg;
+  --btn-color-s: 96.92308%;
+  --btn-color-l: 61.76471%;
+  --btn-color-rgb: #fca13f;
+  --text-color: white;
+}
+
+.btn-yelloworange.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-yelloworange:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-yelloworange.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-easternblue {
+  --btn-color-h: 195.97122deg;
+  --btn-color-s: 65.87678%;
+  --btn-color-l: 41.37255%;
+  --btn-color-rgb: #248aaf;
+  --text-color: white;
+}
+
+.btn-easternblue.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-easternblue:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-easternblue.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-kimberly {
+  --btn-color-h: 240deg;
+  --btn-color-s: 20%;
+  --btn-color-l: 50%;
+  --btn-color-rgb: #666699;
+  --text-color: white;
+}
+
+.btn-kimberly.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-kimberly:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-kimberly.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-fiord {
+  --btn-color-h: 215.76923deg;
+  --btn-color-s: 31.3253%;
+  --btn-color-l: 32.54902%;
+  --btn-color-rgb: #394e6d;
+  --text-color: white;
+}
+
+.btn-fiord.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-fiord:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-fiord.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-sanjuan {
+  --btn-color-h: 201.11111deg;
+  --btn-color-s: 34.17722%;
+  --btn-color-l: 30.98039%;
+  --btn-color-rgb: #34576a;
+  --text-color: white;
+}
+
+.btn-sanjuan.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-sanjuan:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-sanjuan.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-breakerbay {
+  --btn-color-h: 186.10169deg;
+  --btn-color-s: 23.32016%;
+  --btn-color-l: 49.60784%;
+  --btn-color-rgb: #61969c;
+  --text-color: white;
+}
+
+.btn-breakerbay.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-breakerbay:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-breakerbay.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-tapestry {
+  --btn-color-h: 342.55814deg;
+  --btn-color-s: 37.06897%;
+  --btn-color-l: 54.5098%;
+  --btn-color-rgb: #b66079;
+  --text-color: white;
+}
+
+.btn-tapestry.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-tapestry:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-tapestry.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-carnation {
+  --btn-color-h: 7.7193deg;
+  --btn-color-s: 93.44262%;
+  --btn-color-l: 64.11765%;
+  --btn-color-rgb: #f9644e;
+  --text-color: white;
+}
+
+.btn-carnation.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-carnation:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-carnation.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-scorpion {
+  --btn-color-h: 330deg;
+  --btn-color-s: 1.07527%;
+  --btn-color-l: 36.47059%;
+  --btn-color-rgb: #5e5c5d;
+  --text-color: white;
+}
+
+.btn-scorpion.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-scorpion:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-scorpion.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-astral {
+  --btn-color-h: 201.86916deg;
+  --btn-color-s: 47.98206%;
+  --btn-color-l: 43.72549%;
+  --btn-color-rgb: #3a7ea5;
+  --text-color: white;
+}
+
+.btn-astral.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-astral:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-astral.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-contessa {
+  --btn-color-h: 9.62963deg;
+  --btn-color-s: 36.9863%;
+  --btn-color-l: 57.05882%;
+  --btn-color-rgb: #ba7669;
+  --text-color: white;
+}
+
+.btn-contessa.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-contessa:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-contessa.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-salem {
+  --btn-color-h: 142.5deg;
+  --btn-color-s: 75.55556%;
+  --btn-color-l: 35.29412%;
+  --btn-color-rgb: #169e49;
+  --text-color: white;
+}
+
+.btn-salem.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-salem:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-salem.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-oslogray {
+  --btn-color-h: 184deg;
+  --btn-color-s: 6.66667%;
+  --btn-color-l: 55.88235%;
+  --btn-color-rgb: #879596;
+  --text-color: white;
+}
+
+.btn-oslogray.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-oslogray:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-oslogray.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-cosmic {
+  --btn-color-h: 324.4898deg;
+  --btn-color-s: 31.21019%;
+  --btn-color-l: 30.78431%;
+  --btn-color-rgb: #673653;
+  --text-color: white;
+}
+
+.btn-cosmic.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-cosmic:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-cosmic.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-oceangreen {
+  --btn-color-h: 165deg;
+  --btn-color-s: 42.99065%;
+  --btn-color-l: 41.96078%;
+  --btn-color-rgb: #3d9982;
+  --text-color: white;
+}
+
+.btn-oceangreen.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-oceangreen:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-oceangreen.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-rawsienna {
+  --btn-color-h: 21.20301deg;
+  --btn-color-s: 56.11814%;
+  --btn-color-l: 53.52941%;
+  --btn-color-rgb: #cb7546;
+  --text-color: white;
+}
+
+.btn-rawsienna.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-rawsienna:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-rawsienna.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-sanmarino {
+  --btn-color-h: 224.55446deg;
+  --btn-color-s: 40.89069%;
+  --btn-color-l: 48.43137%;
+  --btn-color-rgb: #4963ae;
+  --text-color: white;
+}
+
+.btn-sanmarino.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-sanmarino:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-sanmarino.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-rouge {
+  --btn-color-h: 309.54545deg;
+  --btn-color-s: 39.28571%;
+  --btn-color-l: 43.92157%;
+  --btn-color-rgb: #9c448e;
+  --text-color: white;
+}
+
+.btn-rouge.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-rouge:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-rouge.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-valencia {
+  --btn-color-h: 358.45161deg;
+  --btn-color-s: 65.40084%;
+  --btn-color-l: 53.52941%;
+  --btn-color-rgb: #d63b3f;
+  --text-color: white;
+}
+
+.btn-valencia.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-valencia:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-valencia.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-anzac {
+  --btn-color-h: 40.74074deg;
+  --btn-color-s: 69.23077%;
+  --btn-color-l: 54.11765%;
+  --btn-color-rgb: #dba739;
+  --text-color: white;
+}
+
+.btn-anzac.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-anzac:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-anzac.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-mulledwine {
+  --btn-color-h: 266.66667deg;
+  --btn-color-s: 19.56522%;
+  --btn-color-l: 36.07843%;
+  --btn-color-rgb: #5a4a6e;
+  --text-color: white;
+}
+
+.btn-mulledwine.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-mulledwine:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-mulledwine.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-orient {
+  --btn-color-h: 204.26471deg;
+  --btn-color-s: 98.55072%;
+  --btn-color-l: 27.05882%;
+  --btn-color-rgb: #015289;
+  --text-color: white;
+}
+
+.btn-orient.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-orient:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-orient.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-slategray {
+  --btn-color-h: 203.33333deg;
+  --btn-color-s: 14.7541%;
+  --btn-color-l: 47.84314%;
+  --btn-color-rgb: #687e8c;
+  --text-color: white;
+}
+
+.btn-slategray.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-slategray:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-slategray.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-fountainblue {
+  --btn-color-h: 186.53465deg;
+  --btn-color-s: 42.61603%;
+  --btn-color-l: 53.52941%;
+  --btn-color-rgb: #56b0bb;
+  --text-color: white;
+}
+
+.btn-fountainblue.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-fountainblue:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-fountainblue.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-pictonblue {
+  --btn-color-h: 197.19101deg;
+  --btn-color-s: 80.90909%;
+  --btn-color-l: 56.86275%;
+  --btn-color-rgb: #38b7ea;
+  --text-color: white;
+}
+
+.btn-pictonblue.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-pictonblue:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-pictonblue.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-claret {
+  --btn-color-h: 345deg;
+  --btn-color-s: 66.66667%;
+  --btn-color-l: 25.88235%;
+  --btn-color-rgb: #6e162c;
+  --text-color: white;
+}
+
+.btn-claret.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-claret:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-claret.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-tuna {
+  --btn-color-h: 240deg;
+  --btn-color-s: 6.15385%;
+  --btn-color-l: 25.4902%;
+  --btn-color-rgb: #3d3d45;
+  --text-color: white;
+}
+
+.btn-tuna.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-tuna:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-tuna.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-japonica {
+  --btn-color-h: 354.39252deg;
+  --btn-color-s: 56.61376%;
+  --btn-color-l: 62.94118%;
+  --btn-color-rgb: #d66b75;
+  --text-color: white;
+}
+
+.btn-japonica.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-japonica:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-japonica.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-envy {
+  --btn-color-h: 150deg;
+  --btn-color-s: 12.38095%;
+  --btn-color-l: 58.82353%;
+  --btn-color-rgb: #89a396;
+  --text-color: white;
+}
+
+.btn-envy.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-envy:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-envy.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-easternblue2 {
+  --btn-color-h: 178.125deg;
+  --btn-color-s: 64.64646%;
+  --btn-color-l: 38.82353%;
+  --btn-color-rgb: #23a39f;
+  --text-color: white;
+}
+
+.btn-easternblue2.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-easternblue2:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-easternblue2.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-porsche {
+  --btn-color-h: 25.95745deg;
+  --btn-color-s: 79.66102%;
+  --btn-color-l: 65.29412%;
+  --btn-color-rgb: #ed9d60;
+  --text-color: white;
+}
+
+.btn-porsche.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-porsche:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-porsche.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-brickred {
+  --btn-color-h: 351.94631deg;
+  --btn-color-s: 59.36255%;
+  --btn-color-l: 50.78431%;
+  --btn-color-rgb: #cc374b;
+  --text-color: white;
+}
+
+.btn-brickred.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-brickred:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-brickred.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-corn {
+  --btn-color-h: 48.26667deg;
+  --btn-color-s: 98.25328%;
+  --btn-color-l: 44.90196%;
+  --btn-color-rgb: #e3b702;
+  --text-color: white;
+}
+
+.btn-corn.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-corn:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-corn.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-spicypink {
+  --btn-color-h: 0deg;
+  --btn-color-s: 9.83607%;
+  --btn-color-l: 47.84314%;
+  --btn-color-rgb: #866e6e;
+  --text-color: white;
+}
+
+.btn-spicypink.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-spicypink:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-spicypink.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-neptune {
+  --btn-color-h: 193.22034deg;
+  --btn-color-s: 28.50242%;
+  --btn-color-l: 59.41176%;
+  --btn-color-rgb: #7aa8b5;
+  --text-color: white;
+}
+
+.btn-neptune.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-neptune:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-neptune.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn-horizon {
+  --btn-color-h: 204deg;
+  --btn-color-s: 30.12048%;
+  --btn-color-l: 51.17647%;
+  --btn-color-rgb: #5d8aa8;
+  --text-color: white;
+}
+
+.btn-horizon.inverted.waves-effect .waves-ripple {
+  background: radial-gradient(var(--btn-color-gradient)) !important;
+}
+
+.btn-horizon:not(.inverted) {
+  background: var(--btn-color-rgb);
+  color: var(--text-color) !important;
+}
+
+.btn-horizon.inverted {
+  background: var(--text-color);
+  color: var(--btn-color-rgb) !important;
+  border: thin solid var(--btn-color-rgb) !important;
+  --btn-color-gradient:  hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),0.2) 0,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.3) 40%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.4) 50%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l),.5) 60%,hsla(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l), 0) 70%
+	;
+}
+
+.btn.shadow {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow:focus, .btn.shadow:hover, .btn.shadow:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn.shadow-xs {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow-xs:focus, .btn.shadow-xs:hover, .btn.shadow-xs:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn.shadow-sm {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow-sm:focus, .btn.shadow-sm:hover, .btn.shadow-sm:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn.shadow-md {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow-md:focus, .btn.shadow-md:hover, .btn.shadow-md:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn.shadow-lg {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow-lg:focus, .btn.shadow-lg:hover, .btn.shadow-lg:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.btn.shadow-xl {
+  --l: 20%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+  box-shadow: 0 8px 15px -9px var(--btn-shadow-color);
+}
+
+.btn.shadow-xl:focus, .btn.shadow-xl:hover, .btn.shadow-xl:active {
+  --l: 5%;
+  --btn-shadow-color: hsl(var(--btn-color-h), var(--btn-color-s), var(--btn-color-l));
+  -ms-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  -o-box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+  box-shadow: 0 8px 21px -5px var(--btn-shadow-color);
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-light {
+  background-color: #F5F8FA;
+}
+
+.bg-primary {
+  background-color: #3699FF;
+}
+
+.bg-secondary {
+  background-color: #E4E6EF;
+}
+
+.bg-success {
+  background-color: #1BC5BD;
+}
+
+.bg-info {
+  background-color: #8950FC;
+}
+
+.bg-warning {
+  background-color: #FFA800;
+}
+
+.bg-danger {
+  background-color: #F64E60;
+}
+
+.bg-dark {
+  background-color: #181C32;
+}
+
+.bg-darkgrey {
+  background-color: #a9a9a9;
+}
+
+.bg-red {
+  background-color: #e64b3c;
+}
+
+.bg-orange {
+  background-color: #e57d25;
+}
+
+.bg-green {
+  background-color: #24ad61;
+}
+
+.bg-blue {
+  background-color: #00aedb;
+}
+
+.bg-lightseagreen {
+  background-color: #17bb9c;
+}
+
+.bg-crusta {
+  background-color: #f37735;
+}
+
+.bg-tiffanyblue {
+  background-color: #00aaad;
+}
+
+.bg-teal {
+  background-color: #008080;
+}
+
+.bg-caribeangreen {
+  background-color: #15c59f;
+}
+
+.bg-yelloworange {
+  background-color: #fca13f;
+}
+
+.bg-easternblue {
+  background-color: #248aaf;
+}
+
+.bg-kimberly {
+  background-color: #666699;
+}
+
+.bg-fiord {
+  background-color: #394e6d;
+}
+
+.bg-sanjuan {
+  background-color: #34576a;
+}
+
+.bg-breakerbay {
+  background-color: #61969c;
+}
+
+.bg-tapestry {
+  background-color: #b66079;
+}
+
+.bg-carnation {
+  background-color: #f9644e;
+}
+
+.bg-scorpion {
+  background-color: #5e5c5d;
+}
+
+.bg-astral {
+  background-color: #3a7ea5;
+}
+
+.bg-contessa {
+  background-color: #ba7669;
+}
+
+.bg-salem {
+  background-color: #169e49;
+}
+
+.bg-oslogray {
+  background-color: #879596;
+}
+
+.bg-cosmic {
+  background-color: #673653;
+}
+
+.bg-oceangreen {
+  background-color: #3d9982;
+}
+
+.bg-rawsienna {
+  background-color: #cb7546;
+}
+
+.bg-sanmarino {
+  background-color: #4963ae;
+}
+
+.bg-rouge {
+  background-color: #9c448e;
+}
+
+.bg-valencia {
+  background-color: #d63b3f;
+}
+
+.bg-anzac {
+  background-color: #dba739;
+}
+
+.bg-mulledwine {
+  background-color: #5a4a6e;
+}
+
+.bg-orient {
+  background-color: #015289;
+}
+
+.bg-slategray {
+  background-color: #687e8c;
+}
+
+.bg-fountainblue {
+  background-color: #56b0bb;
+}
+
+.bg-pictonblue {
+  background-color: #38b7ea;
+}
+
+.bg-claret {
+  background-color: #6e162c;
+}
+
+.bg-tuna {
+  background-color: #3d3d45;
+}
+
+.bg-japonica {
+  background-color: #d66b75;
+}
+
+.bg-envy {
+  background-color: #89a396;
+}
+
+.bg-easternblue2 {
+  background-color: #23a39f;
+}
+
+.bg-porsche {
+  background-color: #ed9d60;
+}
+
+.bg-brickred {
+  background-color: #cc374b;
+}
+
+.bg-corn {
+  background-color: #e3b702;
+}
+
+.bg-spicypink {
+  background-color: #866e6e;
+}
+
+.bg-neptune {
+  background-color: #7aa8b5;
+}
+
+.bg-horizon {
+  background-color: #5d8aa8;
+}
+
+.btn.btn-xs {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.7rem;
+}
+
+.btn.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.btn.btn-md {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+}
+
+.btn.btn-lg {
+  padding: 0.7rem 0.7rem;
+  font-size: 1rem;
+}
+
+.btn.btn-xl {
+  padding: 0.9rem 1rem;
+  font-size: 1.1rem;
+}

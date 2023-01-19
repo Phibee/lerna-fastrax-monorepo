@@ -1,0 +1,24 @@
+@mixin transition($propval) {
+  -webkit-transition: $propval;
+  -moz-transition: $propval;
+  -ms-transition: $propval;
+  -o-transition: $propval;
+  transition: $propval;
+}
+
+@mixin animation($propval) {
+  -webkit-animation: $propval;
+  -moz-animation: $propval;
+  -ms-animation: $propval;
+  -o-animation: $propval;
+  animation: $propval;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

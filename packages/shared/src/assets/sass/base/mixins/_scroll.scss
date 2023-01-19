@@ -1,0 +1,40 @@
+/*
+    Scroll Mixins
+*/
+
+$scrollbar-thumb-border:                        3rem !default;
+$scrollbar-thumb-bgColor:                      #c5c5c5 !default;
+$scrollbar-thumb-width:                         10px !default;
+$scrollbar-thumb-height:                        10px !default;
+
+@mixin scrollbar-color($color, $hover-color: null) {
+      // Firefox
+      scrollbar-color: $color transparent;
+
+      *::-webkit-scrollbar-track {
+            background-color: #f4f4f5;
+      }
+
+      *::-webkit-scrollbar {
+            width: $scrollbar-thumb-width;
+            height: $scrollbar-thumb-height;
+      }
+
+      *::-webkit-scrollbar-thumb {
+            border-radius: $scrollbar-thumb-border;
+            background-color: $scrollbar-thumb-bgColor;
+      }
+
+      @if ($hover-color != null) {
+            // Hover state
+            &:hover {
+                  // Firefox
+                  scrollbar-color: $hover-color transparent;
+
+                  // Webkit
+                  &::-webkit-scrollbar-thumb {
+                        background-color: $hover-color;
+                  }
+            }
+      }
+}

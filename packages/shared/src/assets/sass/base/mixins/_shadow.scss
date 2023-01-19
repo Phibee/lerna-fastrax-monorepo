@@ -1,0 +1,19 @@
+@mixin box-shadow($propval, $color: "") {
+  -webkit-box-shadow: #{$propval} #{$color};
+  -moz-box-shadow: #{$propval} #{$color};
+  -ms-box-shadow: #{$propval} #{$color};
+  -o-box-shadow: #{$propval} #{$color};
+  box-shadow: #{$propval} #{$color};
+}
+
+@mixin custom-box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $spread $color;
+    -moz-box-shadow:inset $top $left $blur $spread $color;
+    box-shadow:inset $top $left $blur $spread $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $spread $color;
+    -moz-box-shadow: $top $left $blur $spread $color;
+    box-shadow: $top $left $blur $spread $color;
+  }
+}

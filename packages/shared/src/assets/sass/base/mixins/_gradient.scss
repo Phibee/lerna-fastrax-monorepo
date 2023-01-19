@@ -1,0 +1,7 @@
+
+@mixin bg-gradient($gradient, $important: false) {
+  background: -webkit-radial-gradient(#{$gradient}) if-important($important);
+  background: -o-radial-gradient(#{$gradient}) if-important($important);
+  background: -moz-radial-gradient(#{$gradient}) if-important($important);
+  background: radial-gradient(#{$gradient}) if-important($important);
+}
