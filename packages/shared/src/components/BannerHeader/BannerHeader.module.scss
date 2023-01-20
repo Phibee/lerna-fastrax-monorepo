@@ -1,0 +1,33 @@
+.header {
+  min-height: 39px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 10px 0px 10px 25px;
+  background: #333333;
+}
+
+.content {
+  width: fit-content;
+}
+
+.title {
+  font-size: 14pt;
+}
+
+.subtext {
+  font-size: 10pt;
+  font-weight: 300;
+  margin-top: 4px;
+}
+
+.image {
+  width: 16px;
+  height: 16px;
+  margin-top: 4px;
+  margin-right: 8px;
+}
+
+.toggle {
+  right: 44px;
+  bottom: -14px;
+}

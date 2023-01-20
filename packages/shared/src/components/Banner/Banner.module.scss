@@ -1,0 +1,18 @@
+.container {
+  min-height: 40px;
+  position: relative;
+  box-shadow: 0px 9px 13px -12px #dedede !important;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    width: 12%;
+    left: 18px;
+    height: 6px;
+    background-color: #f9ad48;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+}
